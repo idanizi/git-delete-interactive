@@ -18,27 +18,26 @@ async function run() {
     const {selectedBranches} = await prompts({
         type: 'multiselect',
         name: 'selectedBranches',
-        message: 'Delete branches',
+        message: 'Delete branches (right arrow key to select, `a` to select all)',
         choices,
         hint: choices[0].hint,
         warn: 'current branch',
-        // onState({value}) {
-        //     console.log({'this.hint': this.hint, choices})
-        //     // this.hint = choices.find(c => c.value === value).hint
-        // }
+        instructions: false,
+        onRender() {
+            this.hint = choices[this.cursor].hint
+        }
     })
 
     await deleteBranches(selectedBranches)
 }
 
 async function deleteBranches(branches) {
-    console.log({branches})
-    // if (!branches) return
-    // for (let branch of branches) {
-    //     const {stdout, stderr} = await exec(`git branch -d ${branch}`)
-    //     process.stdout.write(stdout)
-    //     process.stderr.write(stderr)
-    // }
+    if (!branches) return
+    for (let branch of branches) {
+        const {stdout, stderr} = await exec(`git branch -d ${branch}`)
+        process.stdout.write(stdout)
+        process.stderr.write(stderr)
+    }
 }
 
 function onError(e) {
