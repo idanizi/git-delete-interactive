@@ -1,15 +1,15 @@
 {
-  "name": "git-checkout-interactive",
+  "name": "git-delete-interactive",
   "version": "1.0.1",
-  "description": "Quick switch between git branches",
-  "author": "Pete Cook",
+  "description": "Quick delete git branches",
+  "author": "Idan Izicovich",
   "license": "MIT",
   "engines": {
     "node": ">=7.6.0"
   },
   "bin": {
-    "gci": "index.js",
-    "git-interactive-checkout": "index.js"
+    "gdi": "index.js",
+    "git-delete-interactive": "index.js"
   },
   "dependencies": {
     "prompts": "^2.0.4"
