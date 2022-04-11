@@ -5,6 +5,7 @@
   "author": "Idan Izicovich",
   "license": "MIT",
   "repository": "https://github.com/idanizi/git-delete-interactive",
+  "homepage": "https://www.idanizi.com",
   "engines": {
     "node": ">=7.6.0"
   },
