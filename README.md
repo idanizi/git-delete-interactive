@@ -13,5 +13,7 @@ npm install -g git-delete-interactive
 ```bash
 gdi
 ```
+![image](https://user-images.githubusercontent.com/9889268/162805563-1c788ad2-a631-4495-8f83-8d37e8875025.png)
 
-![image](https://user-images.githubusercontent.com/1926029/56238297-11153f00-6086-11e9-93b7-fe22800e0056.png)
+### Author
+Idan Izicovich - [idanizi.com](https://www.idanizi.com) - <idanizi@gmail.com>
