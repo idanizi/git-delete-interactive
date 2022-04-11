@@ -4,6 +4,7 @@
   "description": "Quick delete git branches",
   "author": "Idan Izicovich",
   "license": "MIT",
+  "repository": "https://github.com/idanizi/git-delete-interactive",
   "engines": {
     "node": ">=7.6.0"
   },
