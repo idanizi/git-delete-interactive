@@ -1,6 +1,6 @@
 {
   "name": "git-delete-interactive",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Quick delete git branches",
   "author": "Idan Izicovich",
   "license": "MIT",
