@@ -3,6 +3,13 @@
 const {promisify} = require('util')
 const exec = promisify(require('child_process').exec)
 const prompts = require('prompts')
+const {program} = require('commander')
+
+program
+    .name('gdi')
+    .description('Quick delete git branches')
+    .option('-f, --force', 'delete by force, as "git branch -D <branch>" will do')
+    .parse()
 
 async function run() {
     try {
@@ -37,9 +44,10 @@ async function run() {
 
 async function deleteBranches(branches) {
     if (!branches) return
+    const deleteFlag = program.opts().force ? '-D' : '-d'
     for (let branch of branches) {
         try {
-            const {stdout, stderr} = await exec(`git branch -d ${branch}`)
+            const {stdout, stderr} = await exec(`git branch ${deleteFlag} ${branch}`)
             process.stdout.write(stdout)
             process.stderr.write(stderr)
         } catch (err) {
